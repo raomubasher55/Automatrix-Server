@@ -25,4 +25,9 @@ app.use('/api/v1/user',user);
 app.use('/api/v1/site-survey',siteSurvey);
 app.use(errorMiddleWire)
 
+app.get('test' , (req,res)=>{
+    res.send("Hello World")
+})
+
+
 module.exports = app;
