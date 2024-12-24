@@ -98,6 +98,8 @@ const SiteSurveySchema = new mongoose.Schema({
     ref: 'User',
     required: true,
   },
+},{
+  timestamps: true
 });
 
 // Create the SiteSurvey model
