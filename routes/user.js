@@ -9,4 +9,4 @@ router.get('/:id', isAuthenticatedUser, getUserById);
 router.put('/:userId/:role', isAuthenticatedUser, authorizeRoles('admin'), updateUserRole);
 router.delete('/:userId', isAuthenticatedUser, authorizeRoles('admin'), deleteUser);
 
-module.exports = router;
+module.exports = router;    
