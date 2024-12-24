@@ -1,27 +1,12 @@
 const dotenv = require('dotenv').config({ path: './config/config.env' });
 const app = require('./app');
-const http = require('http');
-const socketIo = require('socket.io');
 const connectDatabase = require('./config/database');
-const server = http.createServer(app);
-const io = socketIo(server);
 
 const port = process.env.PORT ; 
 const env = process.env.NODE_ENV || 'development'; 
  
 connectDatabase();  
 
-
-
-// Listen for connections
-io.on('connection', (socket) => {
-  console.log('A user connected');
-
-  // Listen for events from the client (if needed)
-  socket.on('disconnect', () => {
-    console.log('User disconnected');
-  });
-});
 
 
 
