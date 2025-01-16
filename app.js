@@ -5,11 +5,8 @@ const cors = require('cors');
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
-app.use(cors({
-    origin: ['http://localhost:3000','http://server.automatrix.pk' ,'https://server.automatrix.pk/' ], 
-    credentials: true  
-}));
 
 
 
